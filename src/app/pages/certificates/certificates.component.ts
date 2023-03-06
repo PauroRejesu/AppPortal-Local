@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-admissions',
-  templateUrl: './admissions.component.html',
-  styleUrls: [ './admissions.component.css',
+  selector: 'app-certificates',
+  templateUrl: './certificates.component.html',
+  styles: [
   ]
 })
-export class AdmissionsComponent {
+export class CertificatesComponent {
 
  
-  public admissionsForm = this.fb.group({
+  public certificatesForms = this.fb.group({
 
     typeDocument:  ['CC', [ Validators.required, Validators.minLength(2), Validators.maxLength(2) ]],
     id:  [123456789, [ Validators.required ]],
@@ -24,7 +24,7 @@ export class AdmissionsComponent {
 
   createCertificate(){
 
-    console.log(this.admissionsForm.value);
+    console.log(this.certificatesForms.value);
   }
 
 }

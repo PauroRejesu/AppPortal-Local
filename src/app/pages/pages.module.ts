@@ -14,11 +14,11 @@ import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graphic1Component } from './graphic1/graphic1.component';
-import { AdmissionsComponent } from './certificates/admissions.component';
 import { PagesComponent } from './pages.component';
 import { NotpagefoundComponent } from '../notpagefound/notpagefound.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { RouterModule } from '@angular/router';
+import { CertificatesComponent } from './certificates/certificates.component';
 
 
 
@@ -31,15 +31,14 @@ import { RouterModule } from '@angular/router';
     Graphic1Component,
     PagesComponent,
     NotpagefoundComponent,
-    AdmissionsComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    CertificatesComponent
   ],
   exports:[
     DashboardComponent,
     ProgressComponent,
     Graphic1Component,
     PagesComponent,
-    AdmissionsComponent,
     AccountSettingsComponent
   ],
   imports: [

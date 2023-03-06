@@ -7,18 +7,27 @@ export class SidebarService {
 
   mainMenu: any[] = [
     {
+      title: 'Dashboard',
+      icon:  'mdi mdi-view-dashboard',
+      menu: [ 
+        { titleSubmenu: 'Camas', process: [ 
+          {  titleProcess: 'Asignaciones', url: 'graphic1'}, 
+          {  titleProcess: 'Progreso', url: 'progress'}
+         ] 
+        }
+      ]
+    },
+    {
       title: 'Admisiones',
       icon:  'mdi mdi-account',
       menu: [ 
         { titleSubmenu: 'Certificados', process: [ 
           {  titleProcess: 'Hospitalización', url: 'certificates'}, 
-          {  titleProcess: 'Hospitalización', url: 'certificates'}, 
-          {  titleProcess: 'Hospitalización', url: 'certificates'} 
-          {  titleProcess: 'Hospitalización', url: 'certificates'} 
+          {  titleProcess: 'Paz y Salvos', url: '/'}
         ] },
-        { submenu: 'Listado de Camas', url: '/main'},
-        { submenu: 'Ejemplo 1',}
-        { submenu: 'Ejemplo 2'}
+        { titleSubmenu: 'Listado de Camas', process: []},
+        { titleSubmenu: 'Ejemplo 1', process: []}
+        
       ]
     }
   ]
