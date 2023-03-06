@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Custom Modules.
 import { ComponentsModule } from '../components/components.module';
@@ -17,6 +17,8 @@ import { Graphic1Component } from './graphic1/graphic1.component';
 import { AdmissionsComponent } from './admissions/admissions.component';
 import { PagesComponent } from './pages.component';
 import { NotpagefoundComponent } from '../notpagefound/notpagefound.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -29,14 +31,16 @@ import { NotpagefoundComponent } from '../notpagefound/notpagefound.component';
     Graphic1Component,
     PagesComponent,
     NotpagefoundComponent,
-    AdmissionsComponent
+    AdmissionsComponent,
+    AccountSettingsComponent
   ],
   exports:[
     DashboardComponent,
     ProgressComponent,
     Graphic1Component,
     PagesComponent,
-    AdmissionsComponent
+    AdmissionsComponent,
+    AccountSettingsComponent
   ],
   imports: [
     CommonModule,
@@ -44,6 +48,8 @@ import { NotpagefoundComponent } from '../notpagefound/notpagefound.component';
     SharedModule,
     AppRoutingModule,
     ComponentsModule,
+    ReactiveFormsModule,
+    RouterModule
    ]
 
 })

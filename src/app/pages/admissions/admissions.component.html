@@ -2,8 +2,10 @@
   <div class="card-body">
       <h4 class="card-title">Generación de certificado de hospitalización</h4>
       <h6 class="card-subtitle">Por favor diligenciar toda la informacion en el formulario</h6>
-      <form class="form-horizontal p-t-20">
-          <div class="form-group row">
+      
+      <form class="form-horizontal p-t-20" (ngSubmit="createCertificate()") autocomplete="off" [formGroup]="admissionsForm">
+
+          <div class="form-group row"> 
               <label for="exampleInputuname3" class="col-sm-3 control-label">Tipo Documento*</label>
               <div class="col-sm-9">
                   <div class="input-group">
