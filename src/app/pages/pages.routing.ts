@@ -6,7 +6,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graphic1Component } from './graphic1/graphic1.component';
-import { AdmissionsComponent } from './admissions/admissions.component';
+import { AdmissionsComponent } from './certificates/admissions.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
