@@ -3,9 +3,9 @@
         <h4 class="card-title">Generación de certificado de hospitalización</h4>
         <h6 class="card-subtitle">Por favor diligenciar toda la informacion en el formulario</h6>
         
-        <form class="form-horizontal p-t-20" >
+        <form class="form-horizontal p-t-20" (ngSubmit)="createCertificate()" autocomplete="off" [formGroup]="certificatesForms">
   
-            <div class="form-group row"> 
+            <!-- <div class="form-group row"> 
                 <label for="exampleInputuname3" class="col-sm-3 control-label">Tipo Documento*</label>
                 <div class="col-sm-9">
                     <div class="input-group">
@@ -20,20 +20,32 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="exampleInputEmail3" class="col-sm-3 control-label">Numero Documento*</label>
+                <label class="col-sm-3 control-label" >Numero Documento*</label>
                 <div class="col-sm-9">
                     <div class="input-group">
                         <div class="input-group-addon"><i class="mdi mdi-numeric"></i></div>
-                        <input type="number" class="form-control" id="exampleInputEmail3" placeholder="Numero Documento">
+                        <input type="number" class="form-control" placeholder="Numero Documento"
+                        formControlName = "id">
+                    </div>
+                    <div class="row">
+                        <div class=" col text-danger">
+                            <p class=" text-danger" *ngIf="invalidField('id')">El campo numero de documento, es obligatorio</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="form-group row">
                 <label for="exampleInputEmail3" class="col-sm-3 control-label">Numero de Historia*</label>
                 <div class="col-sm-9">
                     <div class="input-group">
                         <div class="input-group-addon"><i class="mdi mdi-numeric"></i></div>
-                        <input type="number" class="form-control" id="exampleInputEmail3" placeholder="Numero de Historia">
+                        <input type="number" class="form-control" placeholder="Numero de Historia"
+                        formControlName = "history">
+                    </div>
+                    <div class="row">
+                        <div class=" col text-danger">
+                            <p class=" text-danger" *ngIf="invalidField('history')">El campo historia, es obligatorio</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,10 +54,16 @@
                 <div class="col-sm-9">
                     <div class="input-group">
                         <div class="input-group-addon"><i class="mdi mdi-numeric"></i></div>
-                        <input type="number" class="form-control" id="exampleInputEmail3" placeholder="Numero de Ingreso">
+                        <input type="number" class="form-control" placeholder="Numero de Ingreso"
+                        formControlName = "income">
+                    </div>
+                    <div class="row">
+                        <div class=" col text-danger">
+                            <p class=" text-danger" *ngIf="invalidField('income')">El campo ingreso, es obligatorio</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>          
   
             <div class="form-group row m-b-0">
                 <div class="offset-sm-3 col-sm-6">

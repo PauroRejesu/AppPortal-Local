@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 //Custom Modules.
 import { ComponentsModule } from '../components/components.module';
@@ -48,7 +50,9 @@ import { CertificatesComponent } from './certificates/certificates.component';
     AppRoutingModule,
     ComponentsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
+    
    ]
 
 })
